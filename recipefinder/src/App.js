@@ -1,7 +1,8 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-// API key for spoonacular recipes: b092758163cf40dbaea8e7b5e9c5c7ff
+const api_url = "https://api.spoonacular.com/recipes/findByIngredients";
+const api_key = "b092758163cf40dbaea8e7b5e9c5c7ff";
 
 function App() {
   return (
