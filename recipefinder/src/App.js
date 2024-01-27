@@ -13,6 +13,10 @@ const fetchApi = GET => useEffect{
 
 }
 
+const [ recipeData, seRecipeData ] = useState({
+  
+})
+
   return (
     <div className="App">
      
