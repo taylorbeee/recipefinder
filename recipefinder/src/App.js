@@ -2,9 +2,6 @@ import { useState, useCallback, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-const api_url = "https://api.spoonacular.com/recipes/findByIngredients";
-const api_key = "b092758163cf40dbaea8e7b5e9c5c7ff";
-
 // Due date - Feb 25 ------ March 4
 
 function App() {
@@ -50,13 +47,21 @@ function App() {
           Clear Ingredients
         </button>
       </form>
-
-      <h2>Recipes</h2>
-      <ul>
+      <div className="recipes-container">
         {recipes.map((recipe) => (
-          <li key={recipe.id}>{recipe.title}</li>
+          <div className="recipe" key={recipe.id}>
+            <h3>{recipe.title}</h3>
+            <img src={recipe.image} alt={recipe.title} />
+          </div>
         ))}
-      </ul>
+
+        <h2>Recipes:</h2>
+        <ul>
+          {recipes.map((recipe) => (
+            <li key={recipe.id}>{recipe.title}</li>
+          ))}
+        </ul>
+      </div>
       <form className="random-draw-form">
         <button>Random Draw</button>
       </form>

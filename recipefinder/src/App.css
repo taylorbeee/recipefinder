@@ -1,5 +1,11 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
+  width: 100%;
+}
+
+body {
+  background-color: bisque;
 }
 
 .App-logo {
@@ -26,6 +32,52 @@
 
 .App-link {
   color: #61dafb;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: darkgray 1px solid;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4caf50; /* Green */
+  border: black 1px solid;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.recipes-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
+  width: 100%;
+  border: darkgray 5px solid;
+}
+.recipes-container li {
+  display: flex;
+  align-items: center;
+}
+/* .recipes-container img {
+  width: 200px;
+  height: 200px;
+} */
+.recipes-container h2 {
+  text-align: left;
+  margin-left: 10px;
 }
 
 @keyframes App-logo-spin {
