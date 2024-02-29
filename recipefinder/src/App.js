@@ -55,10 +55,14 @@ function App() {
           </div>
         ))}
 
-        <h2>Recipes:</h2>
+<h2>Recipes:</h2>
+      <div className="recipes-container">
         <ul>
           {recipes.map((recipe) => (
-            <li key={recipe.id}>{recipe.title}</li>
+            <li className="recipe" key={recipe.id}>
+              <h3>{recipe.title}</h3>
+              <img src={recipe.image} alt={recipe.title} />
+            </li>
           ))}
         </ul>
       </div>

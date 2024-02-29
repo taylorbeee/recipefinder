@@ -66,25 +66,36 @@ button {
   flex-flow: wrap;
   width: 100%;
   border: darkgray 5px solid;
+  margin: 0;
 }
-.recipes-container li {
-  display: flex;
-  align-items: center;
-}
-/* .recipes-container img {
-  width: 200px;
-  height: 200px;
-} */
 .recipes-container h2 {
   text-align: left;
   margin-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.recipes-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.recipes-container li {
+  display: flex;
+  flex-direction: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  border: darkgray 1px solid;
+  width: 60%;
+}
+.recipes-container img {
+  width: 100%;
+  border: darkgray 1px solid;
+}
+
+.recipes-container h3 {
+  text-align: center;
+  margin-top: 5px;
 }
