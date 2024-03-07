@@ -1,33 +1,44 @@
 import { useState, useCallback, useEffect } from "react";
-import logo from "./logo.svg";
+import axios from "axios";
 import "./App.css";
-
-// Due date - Feb 25 ------ March 4
 
 function App() {
   const [ingredients, setIngredients] = useState([]);
   const [recipes, setRecipes] = useState([]);
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
+  const [missingIngredients, setMissingIngredients] = useState([]);
 
+  // Function to fetch recipes based on ingredients
+  const fetchRecipes = async () => {
+    try {
+      const apiKey = "b092758163cf40dbaea8e7b5e9c5c7ff";
+      const response = await axios.get(
+        `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients.join(
+          ","
+        )}&apiKey=${apiKey}`
+      );
+
+      // Update the recipes state with the fetched data
+      setRecipes(response.data);
+    } catch (error) {
+      console.error("Error fetching recipes:", error);
+    }
+  };
+
+  //    // Function to handle recipe click
+  // const handleRecipeClick = (recipe) => {
+  //   // Set the selected recipe
+  //   setSelectedRecipe(recipe);
+
+  // Calculate missing ingredients
+  //   const missing = recipe.missedIngredients.map(
+  //     (ingredient) => ingredient.name
+  //   );
+  //   setMissingIngredients(missing);
+  // };
+
+  // Fetch recipes when the component mounts or when ingredients change
   useEffect(() => {
-    // Function to fetch recipes based on ingredients
-    const fetchRecipes = async () => {
-      try {
-        // Replace 'YOUR_API_KEY' with the actual API key from the recipe API
-        const apiKey = "b092758163cf40dbaea8e7b5e9c5c7ff";
-        const response = await axios.get(
-          `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients.join(
-            ","
-          )}&apiKey=${apiKey}`
-        );
-
-        // Update the recipes state with the fetched data
-        setRecipes(response.data);
-      } catch (error) {
-        console.error("Error fetching recipes:", error);
-      }
-    };
-
-    // Fetch recipes when the component mounts or when ingredients change
     fetchRecipes();
   }, [ingredients]);
 
@@ -47,19 +58,16 @@ function App() {
           Clear Ingredients
         </button>
       </form>
-      <div className="recipes-container">
-        {recipes.map((recipe) => (
-          <div className="recipe" key={recipe.id}>
-            <h3>{recipe.title}</h3>
-            <img src={recipe.image} alt={recipe.title} />
-          </div>
-        ))}
 
-<h2>Recipes:</h2>
       <div className="recipes-container">
+        <h2>Recipes:</h2>
         <ul>
           {recipes.map((recipe) => (
-            <li className="recipe" key={recipe.id}>
+            <li
+              className="recipe"
+              key={recipe.id}
+              // onClick={() => handleRecipeClick(recipe)}
+            >
               <h3>{recipe.title}</h3>
               <img src={recipe.image} alt={recipe.title} />
             </li>
@@ -69,6 +77,14 @@ function App() {
       <form className="random-draw-form">
         <button>Random Draw</button>
       </form>
+
+      {/* Display selected recipe and missing ingredients */}
+      {/* {selectedRecipe && (
+        <div>
+          <h2>{selectedRecipe.title}</h2>
+          <p>Missing Ingredients: {missingIngredients.join(', ')}</p>
+        </div>
+      )} */}
     </div>
   );
 }
