@@ -74,9 +74,6 @@ function App() {
           ))}
         </ul>
       </div>
-      {/* <form className="random-draw-form">
-        <button>Random Draw</button>
-      </form> */}
 
       {/* Display selected recipe and missing ingredients */}
       {selectedRecipe && (
@@ -85,6 +82,10 @@ function App() {
           <p>Missing Ingredients: {missingIngredients.join(", ")}</p>
         </div>
       )}
+
+      {/* <form className="random-draw-form">
+        <button>Random Draw</button>
+      </form> */}
     </div>
   );
 }
