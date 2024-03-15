@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from "react";
-import axios from "axios";
 import "./App.css";
+//Instal Axios dependencies
+import axios from "axios";
 
 function App() {
   const [ingredients, setIngredients] = useState([]);
