@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import "./App.css";
-//Instal Axios dependencies
+//Instal Axios dependencies!!
 import axios from "axios";
 
 function App() {
@@ -83,7 +83,7 @@ function App() {
           <p>Missing Ingredients: {missingIngredients.join(", ")}</p>
         </div>
       )}
-
+      {/* Random button draw pulls up random photo from Night + Market cookbook - Insanely good */}
       {/* <form className="random-draw-form">
         <button>Random Draw</button>
       </form> */}
