@@ -12,7 +12,7 @@ body {
   height: 40vmin;
   pointer-events: none;
 } */
-
+/* 
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,11 +22,11 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
+/* .App-link {
   color: #61dafb;
-}
+} */
 
 h1 {
   text-align: center;
