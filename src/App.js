@@ -1,7 +1,8 @@
 import { useState, useCallback, useEffect } from "react";
 import "./App.css";
 //Instal Axios dependencies!!
-import axios from "axios";
+// import axios from 'axios';
+import axios, { isCancel, AxiosError } from "axios";
 
 // ------------------- FINALIZE COLORING AND DEBUG
 
