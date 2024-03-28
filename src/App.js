@@ -4,8 +4,6 @@ import "./App.css";
 // import axios from 'axios';
 import axios, { isCancel, AxiosError } from "axios";
 
-// ------------------- FINALIZE COLORING AND DEBUG
-
 function App() {
   const [ingredients, setIngredients] = useState([]);
   const [recipes, setRecipes] = useState([]);
@@ -48,7 +46,7 @@ function App() {
 
   return (
     <div>
-      <h1>Recipe Finder</h1>
+      <h1>Try New Recipes From Ingredients On Hand</h1>
       <form>
         <label>
           Enter ingredients (comma-separated):
@@ -64,7 +62,7 @@ function App() {
       </form>
 
       <div className="recipes-container">
-        <h2>Recipes:</h2>
+        <h2>Recipe Ideas:</h2>
         <ul>
           {recipes.map((recipe) => (
             <li
