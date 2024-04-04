@@ -38,6 +38,7 @@ function App() {
   // };
 
   // Fetch recipes when the component mounts or when ingredients change
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     fetchRecipes();
   }, [ingredients]);
