@@ -1,13 +1,12 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-// import axios, { isCancel, AxiosError } from "axios";
 
 function App() {
   const [ingredients, setIngredients] = useState([]);
   const [recipes, setRecipes] = useState([]);
-  const [selectedRecipe, setSelectedRecipe] = useState(null);
-  const [missingIngredients, setMissingIngredients] = useState([]);
+  // const [selectedRecipe, setSelectedRecipe] = useState(null);
+  // const [missingIngredients, setMissingIngredients] = useState([]);
 
   // Function to fetch recipes based on ingredients
   const fetchRecipes = async () => {
@@ -27,16 +26,16 @@ function App() {
   };
 
   // Function to handle recipe click
-  const handleRecipeClick = (recipe) => {
-    // Set the selected recipe
-    setSelectedRecipe(recipe);
+  // const handleRecipeClick = (recipe) => {
+  // Set the selected recipe
+  // setSelectedRecipe(recipe);
 
-    // Calculate missing ingredients
-    const missing = recipe.missedIngredients.map(
-      (ingredient) => ingredient.name
-    );
-    setMissingIngredients(missing);
-  };
+  // Calculate missing ingredients
+  //   const missing = recipe.missedIngredients.map(
+  //     (ingredient) => ingredient.name
+  //   );
+  //   setMissingIngredients(missing);
+  // };
 
   // Fetch recipes when the component mounts or when ingredients change
   useEffect(() => {
@@ -67,7 +66,7 @@ function App() {
             <li
               className="recipe"
               key={recipe.id}
-              onClick={() => handleRecipeClick(recipe)}
+              // onClick={() => handleRecipeClick(recipe)}
             >
               <h3>{recipe.title}</h3>
               <img src={recipe.image} alt={recipe.title} />
