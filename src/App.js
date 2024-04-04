@@ -76,13 +76,13 @@ function App() {
         </ul>
       </div>
 
-      {/* Display selected recipe and missing ingredients */}
+      {/* Display selected recipe and missing ingredients 
       {selectedRecipe && (
         <div>
           <h2>{selectedRecipe.title}</h2>
           <p>Missing Ingredients: {missingIngredients.join(", ")}</p>
         </div>
-      )}
+      )}*/}
       {/* Random button draw pulls up random photo from Night + Market cookbook - Insanely good */}
       {/* <form className="random-draw-form">
         <button>Random Draw</button>
