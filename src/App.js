@@ -5,6 +5,8 @@ import axios from "axios";
 function App() {
   const [ingredients, setIngredients] = useState([]);
   const [recipes, setRecipes] = useState([]);
+
+  // State variables for missing ingredients
   // const [selectedRecipe, setSelectedRecipe] = useState(null);
   // const [missingIngredients, setMissingIngredients] = useState([]);
 
