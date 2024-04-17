@@ -78,6 +78,8 @@ function App() {
         </ul>
       </div>
 
+      {/* Maybe remove this plan??  */}
+
       {/* Display selected recipe and missing ingredients 
       {selectedRecipe && (
         <div>
