@@ -41,6 +41,7 @@ function App() {
 
   // Fetch recipes when the component mounts or when ingredients change
   // eslint-disable-next-line react-hooks/exhaustive-deps
+
   useEffect(() => {
     fetchRecipes();
   }, [ingredients]);
@@ -50,7 +51,7 @@ function App() {
       <h1>Try New Recipes From Ingredients On Hand</h1>
       <form>
         <label>
-          Enter ingredients (comma-separated):
+          Enter Ingredients (separated by comma):
           <input
             type="text"
             value={ingredients.join(",")}
