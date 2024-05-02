@@ -20,7 +20,7 @@ function App() {
         )}&apiKey=${apiKey}`
       );
 
-      // Update the recipes state with the fetched data
+      // Update the recipes state with fetched data
       setRecipes(response.data);
     } catch (error) {
       console.error("Error fetching recipes:", error);
@@ -38,9 +38,6 @@ function App() {
   //   );
   //   setMissingIngredients(missing);
   // };
-
-  // Fetch recipes when the component mounts or when ingredients change
-  // eslint-disable-next-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     fetchRecipes();
