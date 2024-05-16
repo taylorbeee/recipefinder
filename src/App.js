@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-// Something about this axios import is stopping all deployments of the site!!!!!
-// NEED TO DEBUG ASAP
 
 function App() {
   const [ingredients, setIngredients] = useState([]);
