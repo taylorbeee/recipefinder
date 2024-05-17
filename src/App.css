@@ -34,6 +34,7 @@ button {
   font-size: 14px;
   margin: 4px 2px;
   cursor: pointer;
+  /* border: darkgray 1px solid;*/
 }
 .recipes-container {
   display: flex;
@@ -43,6 +44,7 @@ button {
   width: 100%;
   margin: 0;
   padding-bottom: 20px;
+  /* border: darkgray 1px solid;*/
 }
 .recipes-container h2 {
   text-align: left;
@@ -56,6 +58,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  /* border: darkgray 1px solid;*/
 }
 .recipes-container li {
   display: flex;
