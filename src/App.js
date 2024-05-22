@@ -6,10 +6,6 @@ function App() {
   const [ingredients, setIngredients] = useState([]);
   const [recipes, setRecipes] = useState([]);
 
-  // State variables for missing ingredients
-  // const [selectedRecipe, setSelectedRecipe] = useState(null);
-  // const [missingIngredients, setMissingIngredients] = useState([]);
-
   // Function to fetch recipes based on ingredients
   const fetchRecipes = async () => {
     try {
@@ -26,18 +22,6 @@ function App() {
       console.error("Error fetching recipes:", error);
     }
   };
-
-  // Function to handle recipe click
-  // const handleRecipeClick = (recipe) => {
-  // Set the selected recipe
-  // setSelectedRecipe(recipe);
-
-  // Calculate missing ingredients
-  //   const missing = recipe.missedIngredients.map(
-  //     (ingredient) => ingredient.name
-  //   );
-  //   setMissingIngredients(missing);
-  // };
 
   useEffect(() => {
     fetchRecipes();
@@ -64,11 +48,7 @@ function App() {
         <h2>Recipe Ideas:</h2>
         <ul>
           {recipes.map((recipe) => (
-            <li
-              className="recipe"
-              key={recipe.id}
-              // onClick={() => handleRecipeClick(recipe)}
-            >
+            <li className="recipe" key={recipe.id}>
               <h3>{recipe.title}</h3>
               <img src={recipe.image} alt={recipe.title} />
             </li>
@@ -80,25 +60,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* Potential add-on  */
-}
-
-{
-  /* Display selected recipe and missing ingredients 
-      {selectedRecipe && (
-        <div>
-          <h2>{selectedRecipe.title}</h2>
-          <p>Missing Ingredients: {missingIngredients.join(", ")}</p>
-        </div>
-      )}*/
-}
-{
-  /* Random button draw pulls up random photo from Night + Market cookbook - Insanely good */
-}
-{
-  /* <form className="random-draw-form">
-        <button>Random Draw</button>
-      </form> */
-}
