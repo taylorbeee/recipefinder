@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 
+// To do: Find way to remove or replace axios for new deployment effort
+
 function App() {
   const [ingredients, setIngredients] = useState([]);
   const [recipes, setRecipes] = useState([]);
